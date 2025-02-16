@@ -632,10 +632,6 @@ video {
   top: 55%;
 }
 
-.-z-10 {
-  z-index: -10;
-}
-
 .-z-20 {
   z-index: -20;
 }
@@ -917,10 +913,6 @@ video {
 
 .overflow-x-hidden {
   overflow-x: hidden;
-}
-
-.scroll-smooth {
-  scroll-behavior: smooth;
 }
 
 .rounded {
