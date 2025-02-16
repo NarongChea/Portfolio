@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script
+      src="https://kit.fontawesome.com/7f2b4461f8.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .nav-pills .nav-link {
+        border-radius: 999px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease-in-out;
+      }
+      .absolute {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .nav-pills .nav-link.active {
+        background-color: rgba(128, 128, 128, 0.5) !important;
+        color: white !important;
+        border-radius: 999px;
+        display: inline-block;
+      }
+
+      /* Scrollable container */
+      .scrollspy-example {
+        height: 100vh;
+        overflow-y: scroll;
+      }
+
+      /* Hide the scrollbar */
+      .scrollspy-example::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Ensure the backdrop filter is applied correctly */
+      .blur-backdrop {
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000; /* Ensure it's above other elements */
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-slate-900 -z-20 overflow-x-hidden">
+    
+    <div class="my-0 mx-auto">
+      <div class="relative dark:bg-slate-900">
+        <!-- Parent div with relative position for background blur -->
+        <nav
+          id="navbar-example2"
+          class="navbar navbar-light p-0"
+          style="background: rgba(0, 0, 0, 0.3)"
+        >
+          <ul
+            class="nav nav-pills p-2 fixed top-0 sm:mt-[20px] blur-backdrop flex flex-wrap justify-evenly w-[100%] z-10 sm:w-[574px] sm:rounded-full transition-all duration-300 ease-out"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link py-2 px-3 active bg-gray-500 bg-opacity-50 text-white rounded-full"
+                href="#scrollspyHeading1"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-2 px-3 text-white" href="#scrollspyHeading2"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-2 px-3 text-white" href="#scrollspyHeading3"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-2 px-3 text-white" href="#scrollspyHeading4"
+                >Skills</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-2 px-3 text-white" href="#scrollspyHeading5"
+                >Experience</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-2 px-3 text-white" href="#scrollspyHeading6"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Scrollable Container for Scrollspy -->
+        <div
+          data-bs-spy="scroll"
+          data-bs-target="#navbar-example2"
+          data-bs-offset="50"
+          class="scrollspy-example position-relative overflow-auto p-3 overflow-x-hidden"
+          tabindex="0"
+        >
+          <div
+            class="absolute right-[11rem] top-[-6rem] h-[31.25rem] w-[31.25rem] rounded-full bg-[#fbe2e3] blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem] z-0"
+          ></div>
+          <div
+            class="absolute left-[-35rem] top-[-1rem] z-0 h-[31.25rem] w-[50rem] rounded-full bg-[#dbd7fb] blur-[10rem] dark:bg-[#676394] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"
+          ></div>
+
+          <!-- Text Content Adjusted to Go Up -->
+          <div
+            id="scrollspyHeading1"
+            class="flex flex-col items-center leading-[1.6] pt-[100px] relative z-0"
+          >
+            <div
+              class="w-[120px] h-[120px] object-cover object-top rounded-full border-4 border-white relative z-10"
+            >
+              <img
+                src="https://scontent.fpnh16-1.fna.fbcdn.net/v/t39.30808-6/473167815_915167424063279_890731148819962693_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGz1vm_H2GgA2onR_mdLloTvMCycBAeosq8wLJwEB6iylyjpWkUPefOXtScf08sRJ67dHLdzda47zY1E3YmEq5V&_nc_ohc=tK_p5pQVN4gQ7kNvgFiKlWK&_nc_oc=Adj_StvWBG40AKQ3vUvz0GfWIMzI4kVrTgId6u5XBd85QxEGVe6DjVo_FASk0XEQ6Y4&_nc_zt=23&_nc_ht=scontent.fpnh16-1.fna&_nc_gid=A_LNPfQcGr9SRWIujvT0drd&oh=00_AYBafAPQsB-LtYC85M684eLakFMrXQoCBAX1UAIJYnR8pw&oe=67B626B2"
+                class="w-100 h-100 rounded-full"
+                alt=""
+              />
+              <span class="absolute top-[55%] right-1 text-[40px]">👋🏻</span>
+            </div>
+            <div
+              class="text-white max-w-[760px] leading-[1.7] text-center mt-[16px] mb-[40px]"
+            >
+              <h1 class="text-4xl font-bold">Hello, I'm Narong</h1>
+              <p class="text-[24px] font-[500]">
+                <span class="text-[30px] font-[500] italic"
+                  >Full Stack Developer,</span
+                >
+                constantly fueling my passion for learning. I'm always on the
+                lookout for new things to try. <br />
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="text-gray-200 hover:text-gray-300 hover:scale-125 w-[45px] h-[45px] bg-gray-800 text-center align-content-center rounded-full bg-opacity-40 transition-all duration-200 ease-out"
+                ><i class="fa-brands fa-github-alt"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-200 hover:text-gray-300 hover:scale-125 w-[45px] h-[45px] bg-gray-800 text-center align-content-center rounded-full bg-opacity-40 transition-all duration-200 ease-out"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <button
+                class="border-0 text-gray-200 w-[45px] hover:scale-125 h-[45px] bg-gray-800 text-center align-content-center rounded-full bg-opacity-40 transition-all duration-200 ease-out"
+              >
+                <i class="fa-solid fa-phone"></i>
+              </button>
+            </div>
+          </div>
+
+          <div id="scrollspyHeading2" class="flex justify-center">
+            <div class="w-[720px] flex flex-col items-center dark:text-white">
+              <div
+                class="w-[4px] h-[85px] bg-gray-400 opacity-50 rounded-full my-[96px]"
+              ></div>
+              <div class="">
+                <p class="text-3xl font-semibold mb-5">About Me</p>
+              </div>
+              <div class="w-[24rem] h-[30rem]">
+                <img
+                  src="https://scontent.fpnh16-1.fna.fbcdn.net/v/t39.30808-6/473167815_915167424063279_890731148819962693_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGz1vm_H2GgA2onR_mdLloTvMCycBAeosq8wLJwEB6iylyjpWkUPefOXtScf08sRJ67dHLdzda47zY1E3YmEq5V&_nc_ohc=tK_p5pQVN4gQ7kNvgFiKlWK&_nc_oc=Adj_StvWBG40AKQ3vUvz0GfWIMzI4kVrTgId6u5XBd85QxEGVe6DjVo_FASk0XEQ6Y4&_nc_zt=23&_nc_ht=scontent.fpnh16-1.fna&_nc_gid=A_LNPfQcGr9SRWIujvT0drd&oh=00_AYBafAPQsB-LtYC85M684eLakFMrXQoCBAX1UAIJYnR8pw&oe=67B626B2"
+                  class="w-100 h-100 rounded-lg object-cover"
+                  alt=""
+                />
+              </div>
+              <p class="text-center text-[16px] leading-8 mt-3">
+                I'm a third-year Computer Science student at RUPP. I have good
+                frontend knowledge, mainly working with HTML, CSS, and
+                frameworks like Tailwind CSS and Bootstrap. I'm also starting to
+                learn backend development.
+              </p>
+            </div>
+          </div>
+          <div
+  id="scrollspyHeading3"
+  class="pt-[150px] text-white flex justify-center"
+>
+  <div class="max-w-[40rem] flex flex-col items-center justify-center">
+    <p class="text-3xl font-semibold">Projects</p>
+    <div>
+      <!--  -->
+      <div class=" mt-3 mb-5 bg-slate-800 pl-7 py-7 pr-7 sm:pr-0 rounded-lg overflow-hidden group hover:bg-slate-700 transition-all duration-300">
+        <!-- Text Content -->
+        <div class="flex gap-6">
+          <div class="sm:w-[60%] w-[100%] flex flex-col justify-between h-full">
+            <p class="text-3xl font-semibold">Coolors</p>
+            <p class="text-gray-200">
+              Coolors is a leading design platform dedicated to helping
+              creative professionals and enthusiasts generate beautiful,
+              harmonious color palettes. Founded with the goal of
+              simplifying the color selection process, Coolors offers a
+              suite of intuitive tools for designers, developers, and
+              anyone working with color.
+            </p>
+          </div>
+        
+          <!-- Image -->
+          <div class="w-[50%] hidden sm:block">
+            <img
+              src="images/image1.png"
+              alt=""
+              class="w-full h-full object-cover object-left rounded-tl-lg transition-all duration-300 transform translate-x-7 group-hover:-rotate-2 group-hover:translate-x-2"
+            />
+          </div>
+        </div>
+        <span class="text-white text-[14px] rounded-full px-[10px] py-[5px] bg-slate-900">Tailwind</span>
+        <a href="https://narongchea.github.io/Coloors/" class="text-white text-[14px] rounded-full px-[10px] py-[5px] bg-slate-900 hover:bg-slate-800">View</a>
+      </div>
+      
+      <!--  -->
+      <div class=" bg-slate-800 pr-7 py-7 sm:pl-0 pl-7 rounded-lg overflow-hidden group hover:bg-slate-700 transition-all duration-300">
+        <!-- Image moved to the left -->
+        <div class="flex  gap-6">
+          <div class="w-[50%] hidden sm:block">
+            <img
+              src="images/image.png"
+              alt=""
+              class="w-full h-full object-cover object-center rounded-tr-lg transition-all duration-300 transform -translate-x-7 group-hover:rotate-2 group-hover:-translate-x-2"
+            />
+          </div>
+        
+          <!-- Text Content -->
+          <div class="sm:w-[60%] w-[100%] flex flex-col justify-between h-full">
+            <p class="text-3xl font-semibold">Zando</p>
+            <p class="text-gray-200">
+              Zando is a Cambodian fashion retail company established in
+              early 2015, aiming to inspire your passion for style and
+              provide access to iconic fashion brands at great value.
+              They offer a wide range of clothing and accessories for men,
+              women, and children, with multiple outlets across Phnom Penh,
+              including locations near the Russian Market and in the BKK1 area.
+            </p>
+          </div>
+        </div>
+        <div class="sm:ml-[47%] ml-0">
+          <span class="text-white text-[14px] rounded-full px-[10px] py-[5px] bg-slate-900">Bootstrap</span>
+        <a href="https://narongchea.github.io/Zando/" class="text-white text-[14px] rounded-full px-[10px] py-[5px] bg-slate-900 hover:bg-slate-800">View</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+          <div id="scrollspyHeading4" class="mb-28 mt-28 max-w-[50rem] text-center sm:mb-40 mx-auto ">
+            <p class="text-3xl text-white font-semibold">Skills</p>
+            <div class="flex flex-wrap text-white gap-[6px] justify-center mt-3">
+              <p class="bg-gray-700 bg-opacity-50 text-lg flex items-center gap-2 px-[15px] py-[8px] rounded-lg mb-[2px] mt-0"><i class="fa-brands fa-html5"></i> HTML</p>
+              <p class="bg-gray-700 bg-opacity-50 text-lg flex items-center gap-2 px-[15px] py-[8px] rounded-lg mb-[2px] mt-0"><i class="fa-brands fa-css3"></i> CSS</p>
+              <p class="bg-gray-700 bg-opacity-50 text-lg flex items-center gap-2 px-[15px] py-[8px] rounded-lg mb-[2px] mt-0"><i class='bx bxl-bootstrap' ></i> Bootstrap</p>
+              <p class="bg-gray-700 bg-opacity-50 text-lg flex items-center gap-2 px-[15px] py-[8px] rounded-lg mb-[2px] mt-0"><i class='bx bxl-tailwind-css' ></i> Tailwind</p>
+              <p class="bg-gray-700 bg-opacity-50 text-lg flex items-center gap-2 px-[15px] py-[8px] rounded-lg mb-[2px] mt-0"><i class="fa-brands fa-js"></i> JS</p>
+              <p class="bg-gray-700 bg-opacity-50 text-lg flex items-center gap-2 px-[15px] py-[8px] rounded-lg mb-[2px] mt-0"><i class='bx bxl-c-plus-plus'></i> C++</p>
+              <p class="bg-gray-700 bg-opacity-50 text-lg flex items-center gap-2 px-[15px] py-[8px] rounded-lg mb-[2px] mt-0"><i class="fa-brands fa-java"></i> Java</p>
+            </div>
+          </div>
+          <div id="scrollspyHeading5" class="">
+            <!-- component -->
+             <div class="text-3xl text-white text-center font-semibold">Experience</div>
+<!-- component -->
+<div class=" py-6 flex flex-col justify-center sm:py-12">
+  <div class="py-3 sm:max-w-xl sm:mx-auto w-full px-2 sm:px-0">
+
+    <div class="relative text-gray-700 antialiased text-sm font-semibold">
+
+      <!-- Vertical bar running through middle -->
+      <div class="hidden sm:block w-1 bg-slate-800 absolute h-full left-1/2 transform -translate-x-1/2"></div>
+
+      <!-- Left section, set by justify-start and sm:pr-8 -->
+      <div class="mt-6 sm:mt-0 sm:mb-12">
+        <div class="flex flex-col sm:flex-row items-center">
+          <div class="flex justify-start w-full mx-auto items-center">
+            <div class="w-full sm:w-1/2 sm:pr-8">
+              <div class="p-4 bg-slate-900 bg-opacity-50 border-white border-1 text-white rounded shadow">
+                Now this is a story all about how,
+              </div>
+            </div>
+          </div>
+          <div class="rounded-full bg-slate-600 border-white border-1 p-[2px] w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right section, set by justify-end and sm:pl-8 -->
+      <div class="mt-6 sm:mt-0 sm:mb-12">
+        <div class="flex flex-col sm:flex-row items-center">
+          <div class="flex justify-end w-full mx-auto items-center">
+            <div class="w-full sm:w-1/2 sm:pl-8">
+              <div class="p-4 bg-slate-900 bg-opacity-50 border-white rounded border-1 text-white shadow">
+                My life got flipped turned upside down,
+              </div>
+            </div>
+          </div>
+          <div class="rounded-full bg-slate-600 border-white border-1 p-[2px] w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left section, set by justify-start and sm:pr-8 -->
+      <div class="mt-6 sm:mt-0 sm:mb-12">
+        <div class="flex flex-col sm:flex-row items-center">
+          <div class="flex justify-start w-full mx-auto items-center">
+            <div class="w-full sm:w-1/2 sm:pr-8">
+              <div class="p-4 bg-slate-900 bg-opacity-50 border-white rounded border-1 text-white shadow">
+                And I'd like to take a minute, just sit right there,
+              </div>
+            </div>
+          </div>
+          <div class="rounded-full bg-slate-600 border-white border-1 p-[2px] w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right section, set by justify-end and sm:pl-8 -->
+      <div class="mt-6 sm:mt-0">
+        <div class="flex flex-col sm:flex-row items-center">
+          <div class="flex justify-end w-full mx-auto items-center">
+            <div class="w-full sm:w-1/2 sm:pl-8">
+              <div class="p-4 bg-slate-900 bg-opacity-50 border-white rounded border-1 text-white shadow">
+                I'll tell you how I became the Prince of a town called Bel Air.
+              </div>
+            </div>
+          </div>
+          <div class="rounded-full bg-slate-600 border-white border-1 p-[2px] w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>
+          </div>
+          <div id="scrollspyHeading6" class="pt-20">
+            <div class=" flex flex-col items-center justify-center  text-white px-4">
+              <h2 class="text-3xl font-semibold mb-2">Contact Me</h2>
+              <p class="text-gray-400 mb-6">
+                Feel free to reach out to me at 
+                <a href="mailto:rongrongttk123@gmail.com" class="text-blue-400 underline">rongrongttk123@gmail.com</a>
+                or through the form below.
+              </p>
+              <div class="w-full max-w-lg">
+                <input 
+                  type="email" 
+                  placeholder="Your email" 
+                  class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4"
+                />
+                <textarea 
+                  placeholder="Your message" 
+                  class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4 h-32"
+                ></textarea>
+                <button class="w-full flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 rounded-md">
+                  <i class='bx bxl-telegram'></i>
+                  Submit
+                </button>
+              </div>
+              <footer class="mt-8 text-gray-500 text-sm text-center">
+                &copy; 2025 Narong Chea. All rights reserved.
+                <p class="mt-2 font-semibold">About this website: <span class="text-white">built with Tailwind CSS</span></p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+  </body>
+</html>
